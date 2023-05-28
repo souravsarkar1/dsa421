@@ -16,11 +16,11 @@ function validParantechis(str) {
             stack.pop();
         }
         else {
-           return false;
+            return false;
         }
 
     }
-    return stack.length===0;
+    return stack.length === 0;
 }
 let a = validParantechis("()[]{}");
 console.log(a);
