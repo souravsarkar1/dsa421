@@ -1,54 +1,47 @@
-function find3Numbers(A, arr_size, sum)
-{
+
+function threeSum(arr, n) {
+    let obj = {};
+    let op = 0;
+    arr.sort((a, b) => a - b);
     let l, r;
-  
-    /* Sort the elements */
-    A.sort((a,b) => a-b);
-    let count = 0 ;
-    let ans = [];
-    /* Now fix the first element one 
-    by one and find the
-    other two elements */
-    for (let i = 0; i < arr_size - 2; i++) {
-  
-        // To find the other two
-        // elements, start two index
-        // variables from two corners of 
-        // the array and move
-        // them toward each other
-          
-        // index of the first element in the
-        l = i + 1; 
-          
-        // remaining elements
-          
-       // index of the last element
-        r = arr_size - 1; 
+    for (let i = 0; i < n; i++) {
+        l = i + 1;
+        r = n - 1;
+        arr.sort((a,b)=>a-b);
         while (l < r) {
-            if (A[i] + A[l] + A[r] == sum) 
-            {
-                
-             return  ` ${count++}   ${ans.push(`${arr[i]} ${arr[l]} ${arr[r]}`)}`;
-               // return true;
+            let sum = arr[i] + arr[l] + arr[r];
+            if(sum===0){
+                let res = [arr[i],arr[l],arr[r]].sort((a,b)=>a-b);
+                let key = res.join(' ');
+                if(!obj[key]){
+                    obj[key]= res;
+                    op++;
+                }
             }
-            else if (A[i] + A[l] + A[r] < sum)
+            if(sum<0){
                 l++;
-            else // A[i] + A[l] + A[r] > sum
+            }
+            else{
                 r--;
+            }
         }
     }
-  
-    // If we reach here, then no triplet was found
-//   console.log(count);
-//   console.log(ans);
+    console.log(op);
+    for(let key in obj){
+        console.log(obj[key].join(' '));
+    }
+
 }
-let str = '-1 0 1 2 -1 -4';
-let arr = str.split(' ').map(Number);
-let n = arr.length;
-let sum = 0;
-console.log(find3Numbers(arr,n,sum));;
-/**
- * 1
+
+let input = `1
 6
--1 0 1 2 -1 -4
- */
+-1 0 1 2 -1 -4`
+
+input = input.split('\n');
+let line = 0;
+let tc = +input[line++];
+for(let i =0;i<tc;i++){
+    let n = +input[line++];
+    let arr = input[line++].split(' ').map(Number);
+    threeSum(arr,n);
+}
