@@ -1,4 +1,4 @@
-function floorValue(arr, key) {
+function ceilValue(arr, key) {
     let n = arr.length;
     let start = 0;
     let end = n - 1;
@@ -25,13 +25,13 @@ function floorValue(arr, key) {
 }
 
 let arr = [1, 4, 6, 8, 10];
-let key = 7;
+let key = 8;
 
-let floorIndex = floorValue(arr, key);
+let floorIndex = ceilValue(arr, key);
 
 if (floorIndex !== -1) {
-    let floorValue = arr[floorIndex];
-    console.log("Ceal value:", floorValue);
+    let ceilValue = arr[floorIndex];
+    console.log("Ceal value:", ceilValue);
 } else {
     console.log("No Ceal value found.");
 }
