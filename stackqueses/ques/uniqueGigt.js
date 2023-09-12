@@ -9,7 +9,7 @@ function masaiUniqueGift(str) {
         obj[str[i]]++;
         que.push(str[i]);
         while (que.length !== 0) {
-            if (str[que[0]] === 1) break;
+            if (obj[que[0]] === 1) break;
             que.shift();
         }
         ans[i] = que.length === 0 ? "#" : que[0];
@@ -18,3 +18,5 @@ function masaiUniqueGift(str) {
 }
 
 masaiUniqueGift(`abadbc`);
+let str = `Sou6294@#`.length;
+console.log(str);
