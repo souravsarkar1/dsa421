@@ -9,3 +9,5 @@ function decimalToBinary(n){
 }
 
 decimalToBinary(14);
+"\n"
+decimalToBinary(2)

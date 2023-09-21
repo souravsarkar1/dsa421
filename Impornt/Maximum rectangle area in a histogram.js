@@ -16,8 +16,8 @@
     }
     let ans = 0;
     for (let i = 0; i < n; i++) {
-        const area = arr[i] * (right[i] - left[i]+1);
-        ans = Math.max(ans,area);
+        const area = arr[i] * (right[i] - left[i] + 1);
+        ans = Math.max(ans, area);
     }
     console.log(ans);
 }

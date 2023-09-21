@@ -18,5 +18,3 @@ function masaiUniqueGift(str) {
 }
 
 masaiUniqueGift(`abadbc`);
-let str = `Sou6294@#`.length;
-console.log(str);
