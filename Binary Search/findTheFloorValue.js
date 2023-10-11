@@ -24,7 +24,7 @@ function floorValue(arr, key) {
   }
   
   let arr = [1, 4, 6, 8, 10];
-  let key = 7;
+  let key = 100;
   
   let floorIndex = floorValue(arr, key);
   

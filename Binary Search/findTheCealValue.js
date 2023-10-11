@@ -25,7 +25,7 @@ function ceilValue(arr, key) {
 }
 
 let arr = [1, 4, 6, 8, 10];
-let key = 8;
+let key = 11;
 
 let floorIndex = ceilValue(arr, key);
 
