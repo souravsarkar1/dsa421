@@ -1,4 +1,4 @@
-(function maximumArea(arr = []) {
+(function maximumAreaOfHistogram(arr = []) {
     let n = arr.length;
     let left = [];
     let right = [];

@@ -1,3 +1,5 @@
+
+// zero one knapsack
 function ks(p, wt, n, c) {
     if (n === 0 || c === 0) return 0;
     if (wt[n - 1] > c) return ks(p, wt, n - 1, c);
